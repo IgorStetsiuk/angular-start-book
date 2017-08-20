@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PomodoroTimerComponent } from './components/pomodoro-timer/pomodoro-timer.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PomodoroTimerComponent
+    PomodoroTimerComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule

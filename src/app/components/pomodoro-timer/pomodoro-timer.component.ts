@@ -10,6 +10,8 @@ export class PomodoroTimerComponent implements OnInit {
   seconds = 59;
   pauseLabel: string;
   isPaused: boolean;
+  messageFormCountdown: string;
+  timeout: number;
 
   constructor() {
     this.resetTime();
@@ -40,10 +42,14 @@ export class PomodoroTimerComponent implements OnInit {
   }
 
   togglePause() {
-    console.log(this.isPaused)
+    console.log(this.isPaused);
     this.isPaused = !this.isPaused;
     if (this.minutes < 24 || this.seconds < 59) {
       this.pauseLabel = this.isPaused ? 'Resume' : 'Pause';
     }
+  }
+
+  onCompleat() {
+    this.messageFormCountdown = "Countdown is stopped";
   }
 }

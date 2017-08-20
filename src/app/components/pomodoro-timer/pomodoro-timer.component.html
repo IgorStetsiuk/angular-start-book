@@ -6,3 +6,11 @@
 <p>
   <button (click)="togglePause()">{{pauseLabel}}</button>
 </p>
+
+<p>Countdown clock</p>
+<p>Message : {{messageFormCountdown}}</p>
+<app-countdown [seconds]="25" (complete)="onCompleat()" (progress)="timeout=$event"></app-countdown>
+<p *ngIf="timeout<10">
+  Only <strong>{{timeout}} seconds</strong>
+  left.
+</p>
